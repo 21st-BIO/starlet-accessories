@@ -23,7 +23,7 @@ screw_wc =  48.25;  // widthwise screw centre-to-centre
 screw_d  =   5.50;  // clearance hole — same as access_d in carrier module
 
 // ─── Manifold rubber feet — caliper-measured 2026-10-02 ─────────
-foot_d   =  16.0;   // TODO: rubber foot outer diameter — estimated from photos; measure
+foot_d   =  16.0;   // rubber foot outer diameter — confirmed
 foot_h   =   5.75;  // measured: photo 3
 foot_lr  =  72.06;  // measured: photo 2 — foot c-t-c along carrier length axis
 foot_fb  =  66.01;  // measured: photo 4 — foot c-t-c along carrier width axis

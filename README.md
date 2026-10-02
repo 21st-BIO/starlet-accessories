@@ -132,7 +132,7 @@ Four recessed pockets on the top surface receive the manifold's rubber feet, loc
 | `screw_lc` | 128.00 mm | Lengthwise screw c-t-c — fixed, matches carrier |
 | `screw_wc` |  48.25 mm | Widthwise screw c-t-c — fixed, matches carrier |
 | `screw_d`  |   5.50 mm | Clearance hole diameter |
-| `foot_d`   |  16.0 mm  | **TODO**: rubber foot diameter — estimated from photos |
+| `foot_d`   |  16.0 mm  | Confirmed |
 | `foot_h`   |  5.75 mm  | Measured |
 | `foot_lr`  | 72.06 mm  | Measured — along carrier length axis |
 | `foot_fb`  | 66.01 mm  | Measured — along carrier width axis |
