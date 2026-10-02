@@ -22,11 +22,11 @@ screw_lc = 128.00;  // lengthwise screw centre-to-centre
 screw_wc =  48.25;  // widthwise screw centre-to-centre
 screw_d  =   5.50;  // clearance hole — same as access_d in carrier module
 
-// ─── Manifold rubber feet — VERIFY WITH CALIPERS ────────────────
-foot_d   =  20.0;   // TODO: rubber foot outer diameter
-foot_h   =   5.0;   // TODO: rubber foot protrusion height from manifold base
-foot_lr  = 110.0;   // TODO: L-R foot centre-to-centre (along carrier length)
-foot_fb  =  75.0;   // TODO: F-B foot centre-to-centre (along carrier width)
+// ─── Manifold rubber feet — caliper-measured 2026-10-02 ─────────
+foot_d   =  16.0;   // TODO: rubber foot outer diameter — estimated from photos; measure
+foot_h   =   5.75;  // measured: photo 3
+foot_lr  =  72.06;  // measured: photo 2 — foot c-t-c along carrier length axis
+foot_fb  =  66.01;  // measured: photo 4 — foot c-t-c along carrier width axis
 foot_cl  =   0.5;   // pocket clearance per side (pocket_d = foot_d + 2×foot_cl)
 
 // ─── Plate ──────────────────────────────────────────────────────
