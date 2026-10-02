@@ -111,9 +111,32 @@ Wall-mount C-channel holder for a **Zebra LI2208** barcode scanner in a fixed/st
 
 ### Q-Tray Adapter (`qtray_adapter.scad`)
 
-Deck adapter for Q-trays, using the same torpedo-finger approach as the balance base. Sits on the Hamilton deck torpedo rails; the Q-tray drops into the recessed pocket on top.
+Deck adapter for Q-trays, using the same torpedo-finger approach as the balance base. Sits on the Hamilton deck torpedo rails; the Q-tray drops onto the platform and is located by four corner L-posts.
 
-> **Before printing:** measure the Q-tray with calipers and update `tray_l`, `tray_w`, `pocket_h`, and `n_fingers` in the file. The torpedo finger geometry (`finger_w`, `finger_gap`) must not be changed independently — see the constraint above.
+> **Before printing:** measure the Q-tray with calipers and update `tray_l`, `tray_w`, and `n_fingers` in the file. The torpedo finger geometry (`finger_w`, `finger_gap`) must not be changed independently — see the constraint above.
+
+---
+
+### Vacuum Manifold Carrier Adapter (`vacuum_manifold_adapter.scad`)
+
+Flat plate that mounts a vacuum manifold onto a Hamilton carrier frame. Uses the same 4-screw pattern as the plate carrier module bottom rail (`screw_lc × screw_wc`) — drop it into any standard carrier and bolt it down with the existing carrier screws.
+
+Four recessed pockets on the top surface receive the manifold's rubber feet, locating the manifold precisely in X and Y. The plate auto-sizes: if the manifold is wider than the carrier, the plate grows to contain the foot pockets while the screw holes remain at their correct carrier positions.
+
+> **Before printing:** measure the manifold's rubber feet with calipers and update `foot_d`, `foot_h`, `foot_lr`, and `foot_fb`. All four are currently estimates from ruler photos.
+
+**Key parameters:**
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| `screw_lc` | 128.00 mm | Lengthwise screw c-t-c — fixed, matches carrier |
+| `screw_wc` |  48.25 mm | Widthwise screw c-t-c — fixed, matches carrier |
+| `screw_d`  |   5.50 mm | Clearance hole diameter |
+| `foot_d`   |  20.0 mm  | TODO: rubber foot diameter |
+| `foot_h`   |   5.0 mm  | TODO: rubber foot protrusion height |
+| `foot_lr`  | 110.0 mm  | TODO: L-R foot centre-to-centre |
+| `foot_fb`  |  75.0 mm  | TODO: F-B foot centre-to-centre |
+| `base_h`   |   8.0 mm  | Plate thickness — must be ≥ `foot_h` |
 
 ---
 
@@ -129,7 +152,8 @@ starlet-accessories/
 ├── plate_stacker.scad               # production
 ├── tip_waste_chute_slide.scad       # production
 ├── scanner_holder.scad              # new — verify handle dimensions before printing
-├── qtray_adapter.scad               # new — verify tray dimensions before printing
+├── qtray_adapter.scad               # template — verify Q-tray dimensions before printing
+├── vacuum_manifold_adapter.scad     # new — verify foot dimensions before printing
 └── tests/
     ├── balance_base_finger_test.scad
     ├── balance_base_fork_test.scad
