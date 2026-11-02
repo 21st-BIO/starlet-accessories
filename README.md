@@ -109,6 +109,33 @@ Wall-mount C-channel holder for a **Zebra LI2208** barcode scanner in a fixed/st
 
 ---
 
+### PCR Plate Adapter — Sarstedt 72.1979 (`pcr_plate_adapter_72_1979.scad`)
+
+SBS-footprint adapter that seats the Sarstedt 72.1979 half-skirt 96-well PCR plate in a repeatable, self-centred position on the HHS clamp seat and MFX plate carrier. Eliminates the need to manually push the plate right before clamping.
+
+96 conical guide holes at a 9 mm pitch — wide at the top surface, narrowing as they go down — accept the PCR plate's V-bottom well cones as the plate is lowered from above. The cones self-centre the plate in X and Y.
+
+> **PETG required** — HHS heats to 70 °C.
+
+> **Re-probe every height after fitting this adapter.** The adapter adds ~4.5 mm to the plate stack height; A1 and H12 well-bottom Z values must be re-taught with the plate clamped in the adapter.
+
+**Key parameters:**
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| `sbs_l` / `sbs_w` | 127.76 × 85.48 mm | Adapter outer footprint (SBS standard) |
+| `plate_l` / `plate_w` | 126.1 × 86.0 mm | Sarstedt 72.1979 body (not true SBS) |
+| `pitch` | 9.0 mm | Well pitch |
+| `a1_xl` / `a1_yr` | 13.0 / 11.0 mm | A1 from plate left / rear edge (measured) |
+| `cone_top_d` | 5.5 mm | Guide hole opening at adapter top surface* |
+| `cone_bot_d` | 2.8 mm | Guide hole diameter at cone bottom / through portion* |
+| `cone_h` | 3.0 mm | Conical recess depth |
+| `base_h` | 4.5 mm | Adapter thickness |
+
+\* Estimated from wall-thickness assumption. If the plate rocks, reduce `cone_top_d`; if wells snag the surface, increase it.
+
+---
+
 ### Q-Tray Adapter (`qtray_adapter.scad`)
 
 Deck adapter for Q-trays, using the same torpedo-finger approach as the balance base. Sits on the Hamilton deck torpedo rails; the Q-tray drops onto the platform and is located by four corner L-posts.
@@ -152,6 +179,7 @@ starlet-accessories/
 ├── plate_stacker.scad               # production
 ├── tip_waste_chute_slide.scad       # production
 ├── scanner_holder.scad              # new — verify handle dimensions before printing
+├── pcr_plate_adapter_72_1979.scad   # new — re-probe all heights after printing
 ├── qtray_adapter.scad               # template — verify Q-tray dimensions before printing
 ├── vacuum_manifold_adapter.scad     # new — verify foot dimensions before printing
 └── tests/
