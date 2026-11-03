@@ -60,7 +60,7 @@ Parametric replica of the Hamilton plate carrier module (REF 10072250/00). Holds
 |-----------|-------|-------------|
 | `inner_l` | 118.25 mm | Plate pocket length |
 | `inner_w` | 83.70 mm  | Plate pocket width |
-| `outer_w` | 92.50 mm  | Frame outer width (narrowed 1 mm/side vs OEM to clear adjacent carriers) |
+| `outer_w` | 90.50 mm  | Frame outer width (narrowed 2 mm/side vs OEM to clear adjacent carriers) |
 | `bottom_rail_h` | 15.0 mm | Rail height — sized for current carrier screws; verify against your carrier |
 | `access_d` | 5.50 mm  | Allen key clearance holes above each screw |
 | `spring_t` | 0.80 mm  | Spring tab thickness — reduce for softer spring |

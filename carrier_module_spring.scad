@@ -22,7 +22,7 @@
 inner_l  = 118.25;  // plate pocket length (clear span) — measured
 inner_w  =  83.70;  // plate pocket width  (clear span) — updated for 85.5 mm L-span
 end_wall =   9.95;  // Part 1 wall thickness — was 7.95, +1 mm each side of screw holes
-outer_w  =  92.50;  // was 94.50 — narrowed 1 mm per long side to clear adjacent carriers
+outer_w  =  90.50;  // was 94.50 → 92.50 → 90.50 — narrowed 1 mm per long side each iteration
 total_h  =  51.56;  // frame height: base to top of top plate
 
 bottom_rail_h = 15.0;   // bottom rail height — sits on carrier (was 12.03)
