@@ -21,8 +21,8 @@
 //   outer_l is now derived (inner_l + 2*end_wall) — do not set directly
 inner_l  = 118.25;  // plate pocket length (clear span) — measured
 inner_w  =  83.70;  // plate pocket width  (clear span) — updated for 85.5 mm L-span
-end_wall =   9.95;  // Part 1 wall thickness — was 7.95, +1 mm each side of screw holes
-outer_w  =  90.50;  // was 94.50 → 92.50 → 90.50 — narrowed 1 mm per long side each iteration
+end_wall =   8.95;  // short-end wall thickness — was 9.95; trimmed 1 mm per end for adjacent-carrier clearance
+outer_w  =  92.50;  // frame outer width — unchanged (screw_wc = 48.25 derived from this)
 total_h  =  51.56;  // frame height: base to top of top plate
 
 bottom_rail_h = 15.0;   // bottom rail height — sits on carrier (was 12.03)
@@ -61,8 +61,8 @@ groove_ext    = 6.00;  // extra outward extension past spring tip — widens acc
 // ═══════════════════════════════════════════════════════════════
 //  DERIVED VALUES
 // ═══════════════════════════════════════════════════════════════
-outer_l  = inner_l + 2 * end_wall;            // = 138.15 mm
-sid_wall = (outer_w - inner_w) / 2;           // = 5.40 mm
+outer_l  = inner_l + 2 * end_wall;            // = 136.15 mm
+sid_wall = (outer_w - inner_w) / 2;           // = 4.40 mm
 post_h   = total_h - bottom_rail_h - top_rail_h;  // = 31.53 mm
 t_s      = tab_size - 2 * tab_clearance;      // L-bracket outer with clearance
 
