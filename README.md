@@ -128,9 +128,9 @@ SBS-footprint adapter that seats the Sarstedt 72.1979 half-skirt 96-well PCR pla
 | `pitch` | 9.0 mm | Well pitch |
 | `a1_xl` / `a1_yr` | 13.0 / 11.0 mm | A1 from plate left / rear edge (measured) |
 | `cone_top_d` | 5.5 mm | Guide hole opening at adapter top surface* |
-| `cone_bot_d` | 2.8 mm | Guide hole diameter at cone bottom / through portion* |
+| `cone_bot_d` | 2.8 mm | Guide hole diameter at cone bottom (blind recess)* |
 | `cone_h` | 3.0 mm | Conical recess depth |
-| `base_h` | 4.5 mm | Adapter thickness |
+| `base_h` | 6.0 mm | Adapter thickness — 3 mm solid floor below cones |
 
 \* Estimated from wall-thickness assumption. If the plate rocks, reduce `cone_top_d`; if wells snag the surface, increase it.
 

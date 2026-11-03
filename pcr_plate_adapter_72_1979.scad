@@ -46,18 +46,18 @@ pitch    =   9.0;    // well pitch (standard SBS 96-well)
 
 // ─── Conical guide hole geometry (* estimated — adjust if fit is poor) ────
 // Wide opening at adapter top surface catches the well cone as plate descends.
-// Narrows to a through-hole that clears the very tip.
+// Blind recess — solid floor below the cone. No through-holes.
 //
 // Tuning guide:
 //   If wells snag the flat surface between holes → increase cone_top_d (max ~6.5)
 //   If plate rocks / doesn't self-centre       → reduce  cone_top_d toward 4.5
 //   If tip bottoms out / plate won't seat      → increase cone_bot_d
 cone_top_d =  5.5;   // hole diameter at adapter top surface *
-cone_bot_d =  2.8;   // hole diameter at bottom of cone / through portion *
+cone_bot_d =  2.8;   // diameter at tip of recess (blind, not through) *
 cone_h     =  3.0;   // conical recess depth
 
 // ─── Adapter thickness ───────────────────────────────────────────
-base_h   =  4.5;     // total height — must be > cone_h; stack adds this to plate Z
+base_h   =  6.0;     // total height — floor under cones = base_h − cone_h = 3 mm
 
 // ─── Derived ────────────────────────────────────────────────────
 // Plate is positioned REAR (Y = sbs_w) and RIGHT (X = sbs_l):
@@ -78,14 +78,11 @@ module sbs_footprint(h) {
                     cylinder(r = corner_r, h = h, $fn = 32);
 }
 
-// Guide hole: wide (cone_top_d) at top, tapers to cone_bot_d at depth cone_h,
-// then continues as a through-hole to the adapter bottom face.
-// Call site: translate to [well_x, well_y, base_h] before invoking.
+// Guide hole: wide (cone_top_d) at top, tapers to cone_bot_d at depth cone_h.
+// Blind — solid floor below. Call site: translate to [well_x, well_y, base_h].
 module guide_hole() {
     translate([0, 0, -cone_h])
         cylinder(d1 = cone_bot_d, d2 = cone_top_d, h = cone_h + eps, $fn = 32);
-    translate([0, 0, -base_h - eps])
-        cylinder(d = cone_bot_d, h = base_h - cone_h + 2 * eps, $fn = 32);
 }
 
 difference() {
