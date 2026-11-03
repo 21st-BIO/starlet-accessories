@@ -5,7 +5,7 @@
 
 // ─── Shared dimensions — must match carrier_module.scad ──────
 inner_l  = 118.25;
-end_wall =   9.95;
+end_wall =   8.95;  // trimmed 1 mm/end — must match carrier_module_spring.scad
 outer_w  =  92.50;
 
 screw_lc = 128.00;   // lengthwise screw c-t-c
@@ -18,10 +18,10 @@ bottom_rail_h = 15.0;   // was 12.03 — increased for new carriers
 access_d = 5.50;   // Allen key clearance — full height
 
 // ─── Derived ──────────────────────────────────────────────────
-outer_l  = inner_l + 2 * end_wall;   // = 138.15 mm
+outer_l  = inner_l + 2 * end_wall;   // = 136.15 mm
 
-// Screw X in left rail = outer_l/2 - screw_lc/2 = 5.075 mm from left edge
-hole_x   = outer_l / 2 - screw_lc / 2;   // = 5.075 mm
+// Screw X in left rail = outer_l/2 - screw_lc/2 = 4.075 mm from left edge
+hole_x   = outer_l / 2 - screw_lc / 2;   // = 4.075 mm
 
 eps = 0.01;
 $fn = 48;
