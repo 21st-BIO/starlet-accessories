@@ -56,6 +56,9 @@ cone_top_d =  5.5;   // hole diameter at adapter top surface *
 cone_bot_d =  2.8;   // diameter at tip of recess (blind, not through) *
 cone_h     =  3.0;   // conical recess depth
 
+// ─── Version ─────────────────────────────────────────────────────
+version  = "v1.1";   // increment when geometry changes
+
 // ─── Adapter thickness ───────────────────────────────────────────
 base_h   =  6.0;     // total height — floor under cones = base_h − cone_h = 3 mm
 
@@ -106,7 +109,7 @@ difference() {
     translate([sbs_l / 2, sbs_w / 2, 0.7])
         rotate([180, 0, 0])
             linear_extrude(0.7 + eps)
-                text("72.1979  ADAPTER", size = 4.0, font = "Arial:style=Bold",
+                text(str("72.1979  ADAPTER  ", version), size = 4.0, font = "Arial:style=Bold",
                      halign = "center", valign = "center");
 
     translate([sbs_l / 2, sbs_w / 2 - 6.0, 0.7])
