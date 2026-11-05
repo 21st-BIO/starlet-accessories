@@ -29,7 +29,7 @@ bottom_rail_h = 15.0;   // bottom rail height — sits on carrier (was 12.03)
 top_rail_h    =  8.0;   // ESTIMATE: top plate height — plate rests here
 
 tab_size =  18.01;  // L-bracket outer extent (both legs)
-tab_wall =   3.50;  // reduced from 4.50 — gives 2 mm Y clearance, spring handles X
+tab_wall =   3.00;  // reduced from 3.50 — gives 1 mm/side Y clearance over SBS plate (85.48 mm)
 tab_h    =  13.0;   // ESTIMATE: L-bracket height above top plate
                     //   Adjust in 1 mm steps until module seats in carrier
 
